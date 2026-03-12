@@ -1,0 +1,570 @@
+23.12.2025
+
+24.12.2025
+
+25.12.2025
+
+
+26.12.2025
+
+Basics of HTML:
+
+-> purpose of alt attribute in img tag
+-> how to open the link in a new tab using a tag
+-> Explore audio and video tags
+
+Inline Elements
+Block elements
+
+List - ordered and unordered
+
+Home Assignment:
+-> Create a webpage Heading, an image, a paragraph link and I need to display two lists (ol & ul)
+link should open in new tab.
+
+29.12.2025
+HTML 
+-> Table
+-> Form 
+-> Semantic elements  
+
+Tasks:
+-> purpose of alt attribute in img tag
+-> how to open the link in a new tab using a tag
+-> how to restrict the number of characters in input type text (min and max)
+-> how to give min and max value for input type number and not allowing negative values
+-> what is div tag
+
+Assignment: 
+Create a form using all the input elements
+
+02.01.2026
+CSS:
+Type of styles
+CSS selectors
+-> in css selectors check for the order of priority
+-> attribute selector - check with example
+
+tasks:
+Diff b/w the selectors
+Apply style in the form using css selectors
+
+06.01.2025 
+Box model
+Display properties
+
+Task:
+Create 3 boxes and apply margin, padding, border
+apply display properties - all
+
+07.01.2026
+Flexbox and Grid
+
+https://flexboxfroggy.com/
+https://cssgridgarden.com/
+
+08.01.2026
+
+Task:
+Create a form in html
+Build a **3-card horizontal layout** using Flexbox:
+
+Each card must include:
+
+- Image
+- Title
+- Paragraph
+- Button
+
+Use:
+- `display: flex`
+- `justify-content: space-around`
+- `gap: 20px`
+- align-items: center
+
+Grid task:
+Build a **4-card grid layout** (2 columns × 2 rows):
+
+Requirements:
+
+- Use `display: grid`
+- `grid-template-columns: repeat(2, 1fr)`
+- Add padding + border
+- Add hover effect
+
+09.01.2026
+CSS - position properties
+
+# **Class Task (Position)**
+
+👉 Create a small layout with:
+
+1. A **fixed navbar**
+2. An image with **absolute-positioned text** - text should be displayed on top on the image
+3. A section title that becomes **sticky**
+
+Home Assignment:
+## **ection 1 — Navbar (Positioning)**
+
+Requirements:
+
+- Use `position: fixed`
+- Navbar stays at top
+- Include 3 menu items
+
+---
+
+## 🟩 **Section 2 — Hero Section (Flexbox)**
+
+Layout:
+
+- Left: Title + text + button
+- Right: Image
+
+CSS:
+
+```css
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 40px;
+
+```
+
+---
+
+## 🟨 **Section 3 — Services Section (Grid)**
+
+Use:
+
+```css
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+
+```
+
+Each card includes:
+
+- Icon
+- Title
+- Description
+
+---
+
+## ⭐ Bonus Requirements
+
+✔ One element must use **position: absolute**
+
+✔ Add hover effects
+
+✔ Page must be responsive using Flexbox/Grid
+
+02.02.2026
+
+- Center a div
+-> center horizontally - margin
+-> text-align
+-> using Flexbox - justify-content and align-items - center
+-> using grid - place-items - center
+- Transformations
+-> translate, rotate, scale and skew - matrix()
+- Media query - Responsive layout
+
+Build a **Portfolio Home Page** with:
+
+### **Section 1 — Hero Section (Flexbox)**
+
+- Title + subtitle on left
+- Image on right
+
+### **Section 2 — Skills Grid (Grid Layout)**
+
+3 columns on desktop
+
+1 column on mobile
+
+### **Section 3 — Contact Box (Position + Transform)**
+
+- A card centered 
+- A floating icon (absolute positioned)
+- Apply `transform: scale()` on hover
+
+03.02.2026
+Bootstrap with examples
+
+- default we use px
+- height - vh , max-height
+- rem or %
+
+04.02.2026
+Javascript Basics
+variables and data types
+
+05.02.2026
+data types, conditions, operators
+dom manipulation basics
+class task:
+1. create a Button and onclick -> show alert
+
+assignment:
+1. create a page with 
+-> input field, button and text display
+2. Validate - if input is empty -> show alert
+3. use let, if, function and DOM access
+
+09.02.2026
+loops and functions
+
+task: 
+print prime numbers from 1 to 50
+
+create a function - 
+takes a name and returns greeting message
+
+write a function to check - odd or even
+loop through array of marks - print only marks > 50
+
+10.02.2026
+IIFE and array, object methods with examples
+
+https://pythontutor.com/visualize.html#mode=edit
+
+1. Given:
+
+```jsx
+const marks = [45,67,89,34,76];
+
+```
+
+- Filter marks ≥ 60
+- Calculate total marks
+
+---
+
+2️⃣ Given:
+
+```jsx
+const user = {
+name:"Nirmal",
+skills: ["HTML","CSS","JS"]
+};
+
+```
+
+- Add a new skill
+- Check if `"React"` exists
+
+---
+
+3️⃣ Create an array of users:
+
+- Find user by id
+- Count total users
+
+17.02.2026
+
+=> DOM manipulation
+
+tasks list:
+
+### Task 1 – DOM
+
+- Change text of heading on button click
+
+---
+
+### 🧠 Task 2 – Events
+
+- Input field → display text live
+
+---
+
+### 🧠 Task 3 – Array Rendering
+
+```jsx
+const cities = ["Delhi","Mumbai","Chennai"];
+
+```
+
+✔ Render cities as `<li>` dynamically
+
+---
+
+### 🧠 Task 4 – API (Optional)
+
+- Fetch users from mock API
+- Display names in list
+
+---
+
+# 🏠 HOMEWORK ASSIGNMENT
+
+1️⃣ Create a page with:
+
+- Input
+- Button
+- Empty `<ul>`
+
+2️⃣ On button click:
+
+- Add input value to array
+- Re-render list
+
+3️⃣ Bonus:
+
+- Fetch data from API and display cards
+
+18.02.2026
+CreateElement in DOM
+Dynamic data from API
+
+CRUD - create,read,update,delete
+http requests:
+API - url endpoint
+get, post, put, patch, delete
+
+array of objects - JSON
+
+https://jsonplaceholder.typicode.com/
+
+API endpoint:
+
+base url - https://www.zomato.com
+endpoints - /user-data, /user-reviews, /user-orders, /user-payments
+
+api - https://www.zomato.com/user-data
+
+task - post, put, patch and delete
+
+23.02.2016
+Next topics:
+Callback, Promise and Async await
+
+
+create a simple project with HTML, CSS and JS
+
+task:
+check for promise concepts - types
+
+
+24.02.2026
+Destructuring
+spread operator
+rest parameter
+template literals
+ternary operator
+optional chaining
+
+Tasks:
+
+✅ Task 1 – Callback Function
+
+Create a function:
+
+greetUser(name, callback)
+
+It should:
+
+Print "Hello <name>"
+
+Then execute callback function
+
+Expected Output:
+Hello Nrimal
+Welcome to React
+✅ Task 2 – Arrow Function Conversion
+
+Convert this to arrow function:
+
+function add(a, b) {
+  return a + b;
+}
+✅ Task 3 – Destructuring
+
+Given:
+
+const student = {
+  name: "Ajith",
+  age: 22,
+  course: "MERN"
+};
+
+✔ Extract all properties using destructuring
+✔ Rename course to studentCourse
+
+✅ Task 4 – Spread Operator
+
+Given:
+
+const user = {
+  name: "Nirmal",
+  age: 25
+};
+
+Create a new object:
+
+Update age to 26
+
+Add city: "Chennai"
+
+Do NOT modify original object
+
+✅ Task 5 – Array map() Practice (Very Important for React)
+
+Given:
+
+const users = ["Nirmal", "Ajith", "Sara"];
+
+Use map() to:
+
+Convert all names to uppercase
+
+Store in new array
+
+✅ Task 6 – Ternary Operator
+
+Write a function:
+
+checkAge(age)
+
+Return:
+
+"Adult" if age ≥ 18
+
+"Minor" otherwise
+
+Using ternary operator only.
+
+✅ Task 7 – Rest Operator
+
+Create function:
+
+sum(...numbers)
+
+Return total sum.
+
+Example:
+
+sum(10, 20, 30) → 60
+
+✅ Task 8 – Promise Creation
+
+Create a Promise:
+
+If number is even → resolve("Even number")
+
+Else → reject("Odd number")
+
+Test with different numbers.
+
+✅ Task 9 – Async/Await Conversion
+
+Convert this Promise code:
+
+fetchData()
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+
+Into async/await format.
+
+✅ Task 10 – Simulated API Call
+
+Create function:
+
+function fetchUsers()
+
+Return a Promise
+
+After 2 seconds resolve:
+
+["Nirmal", "Ajith", "Sara"]
+
+Use async/await to:
+
+Print users
+
+Convert them to uppercase using map()
+
+Assignment:
+
+Create:
+
+Array of 5 users
+
+Each user object has name + age
+
+Use map to return only names
+
+Use filter to return users age > 20
+
+Use async function that waits 1 second before printing
+
+25.02.2026
+
+26.02.2026
+Functional Component
+props
+
+state - data that changes in a Component
+ex: counter, input
+Event
+conditional rendering
+
+ESlint - code compliance
+
+02.03.2026
+
+Dynamic rendering of list
+Forms
+
+09.03.2026
+Life cycle methods
+functional components - useEffect
+stages:
+Dependency array
+To run only once - empty dependency array
+To rerender based on a state change - pass it inside the dependency array
+renders in a loop - without dependency array - not recommended to use
+handling side effects
+class component - separate life cycle methods
+
+component loads -> useEffect runs -> Fetch API -> setUserList(data) -> React re-renders UI 
+
+tasks:
+Create a component that shows - Page Loaded
+
+Fetch posts form api: /posts - jsonplaceholder
+display post titles
+
+add loading state while data loads
+
+
+12.03.2026
+
+folder structure
+src/
+  components/
+    Header.jsx
+    UserCard.jsx
+    Button.jsx
+  pages
+    Home.jsx
+  App.js
+
+reusable components:
+
+style:
+-> Inline styling
+-> External Styling
+-> Internal Styling
+-> Dynamic Styling
+
+passing props(array, values)
+
+library - React - SPA
+Framework - Angular
+
+install node.js
+create a folder
+npx create-react-app app-name

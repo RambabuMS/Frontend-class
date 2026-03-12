@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    const url = "https://jsonplaceholder.typicode.com/users";
+
+
+    console.log('-----------');
+    AddUser();
+    console.log('-----------');
+    EditUser(1);
+
+    function AddUser() {
+
+        const user = {
+            name: 'Nirmal Raj',
+            username: "nirmlrj",
+            email: 'nirmlrj@gmail.com'
+        }
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(user),
+            headers: { 'Content-type': 'application/json; charset=utf-8' }
+        }).then(res => res.json()).then(json => { DisplayAllUsers(); });
+    }
+
+    function DisplayAllUsers() {
+        let userDiv = document.createElement("div");        
+        userDiv.style.display = 'flex';
+        userDiv.style.gap = '10px';
+        userDiv.style.justifyContent = 'space-between';
+        userDiv.style.flexDirection = 'row';        
+        document.body.appendChild(userDiv);
+
+        fetch(url).then(res => res.json()).then(data =>
+            data.map(user => {
+                let name = document.createElement('p');
+                name.style.padding = '20px';
+                name.style.margin = '0';     // important
+                name.innerText = user.name;         
+                name.style.backgroundColor = 'lightblue';       
+                userDiv.appendChild(name);
+            })
+        );
+    }
+
+    function DisplayAllUserNames() {
+        fetch(url).then(res => res.json()).then(data => data.map(user => console.log(user.name)));
+    }
+
+    function EditUser(id) {
+        fetch(`{$url}/{$id}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                name: 'Mock Name'
+            }),
+            headers: { 'Content-type': 'application/json; charset=UTF-8' }
+        }).then(res => res.json()).then(data => console.log(data));
+    }
+
+</script>
+
+</html>

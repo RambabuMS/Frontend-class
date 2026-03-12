@@ -1,0 +1,27 @@
+.box
+{
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+
+.inline-box
+{
+    display: inline;
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: lightcyan;    
+}
+
+.inline-block-box
+{
+    display: inline-block;
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: lightcoral;
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,100 @@
+#container
+{
+    display: flex;    
+    justify-content: space-evenly; 
+    align-items: stretch;       
+    height: 98vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-div
+{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex: 0.4;  
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
+}
+
+#info-div
+{
+    display: flex;
+    flex: 0.6;  
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-item
+{    
+    height: auto;    
+    width: 175px;
+    height: 250px;
+    text-align: center;
+    padding: 50px;    
+    box-shadow: 1px 1px 5px grey;
+}
+
+
+.info-item:hover
+{
+    box-shadow: 2px 2px 10px grey;    
+}
+
+.info-item:nth-child(1)
+{
+    background-color: rgb(255, 206, 161);
+}
+
+.info-item:nth-child(1) button
+{
+    background-color: rgb(255, 72, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 5px grey;
+    cursor: pointer;
+}
+
+
+.info-item:nth-child(2)
+{
+    background-color: rgb(148, 212, 255);
+}
+
+.info-item:nth-child(2) button
+{
+    background-color: rgb(0, 47, 255);
+    color: white;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 5px grey;
+    cursor: pointer;
+}
+
+.info-item:nth-child(3)
+{
+    background-color: rgb(255, 239, 148);
+}
+
+.info-item:nth-child(3) button
+{
+    background-color: rgb(255, 145, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 5px grey;
+    cursor: pointer;
+}
+
+.logo
+{
+    width: 75px;
+    height: auto;
+}
+
+form div
+{
+    padding: 10px;
+}

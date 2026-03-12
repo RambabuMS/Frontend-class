@@ -1,0 +1,22 @@
+[
+  {
+    "name": "chair",
+    "price": 200,
+    "weight": "200"
+  },
+  {
+    "name": "table",
+    "price": "500",
+    "weight": "220"
+  },
+  {
+    "name": "stool",
+    "price": "150",
+    "weight": "100"
+  },
+  {
+    "name": "cupboard",
+    "price": "2000",
+    "weight": "500"
+  }
+]

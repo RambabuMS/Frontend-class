@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    //callback hell
+    // login(user, pass, () => {
+    //   getProfile(() => {
+    //     getPosts(() => {
+    //       getComments(() => {
+    //         console.log("Done");
+    //       });
+    //     });
+    //   });
+    // });
+
+    //Callback Hell to promise
+    function Login(user, pass) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (user === "Nirmal" && pass == "p123") {
+                    console.log("Login success");
+                    resolve({
+                        userid: 1,
+                        user: "Nirmal"
+                    })
+                }
+                else {
+                    reject("Login failed. Incorrect credentials");
+                }
+            }, (2000));
+        });
+    }
+
+    function GetProfile(user) {
+        console.log("Loading Profile..");
+        return new Promise((resolve) => {
+            resolve({
+                email: "nirmlrj@gmail.com",
+                location: "chennai",
+                gender: "male"
+            });
+        });
+    }
+
+    function GetPosts() {
+        console.log("Loading posts..");
+        return new Promise((resolve) => {
+            resolve({
+                posts: ['Post 1', 'Post 2', 'Post 3']
+            })
+        });
+    }
+
+    function GetComments(post) {
+        console.log(`Loading comments under ${post}..`);
+        return new Promise((resolve) => {
+            console.log("Comments loaded");
+            resolve({
+                comments: ['Comment 1', 'Comment 2']
+            })
+        });
+    }
+
+    //callback hell to promise chaining
+    Login("Nirmal", "p123")
+        .then((user) => { console.log(user); return GetProfile(user) })
+        .then((profile) => { console.log("Profile loaded"); return GetPosts(); })
+        .then((post) => { console.log("Post loaded"); return GetComments(post.posts[2]); })
+        .catch((error) => console.log("Error found: " + error));
+
+
+    //promise chaining to async/await
+    async function GetUserData() {
+        try {
+            const user = await Login("Nirmal", "p123");
+            const profile = await GetProfile(user);
+            const posts = await GetPosts();
+            const comments = await GetComments(posts.posts[0]);
+        }
+        catch (error) {
+            console.log("Error: " + error);
+        }
+    }
+
+    GetUserData();
+
+</script>
+
+</html>

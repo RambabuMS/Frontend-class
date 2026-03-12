@@ -1,0 +1,240 @@
+* {
+  font-family: Arial;
+}
+/* 
+h1 {
+  color: blue;
+}
+h1,
+.para,
+#paragraph {
+  color: green;
+} */
+/* #paragraph {
+  color: brown;
+} */
+/* .box {
+  width: 200px;
+  padding: 20px;
+  border: 3px solid blue;
+  margin: 30px;
+  background: lightyellow;
+} */
+/* .container {
+  margin: 20px;
+  /* display: block; */
+/* } */
+/* .tag {
+  display: inline;
+}
+.box1 {
+  display: block;
+  background: lightblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.tag {
+  display: inline;
+  background: yellow;
+  padding: 5px;
+  margin-right: 10px;
+}
+.card {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: pink;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 80px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #eef;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.g {
+  background: orange;
+  padding: 20px;
+  text-align: center;
+} */
+body {
+  font-family: Arial;
+  height: 2000px; /* to allow scrolling */
+  padding: 20px;
+}
+
+/* .container {
+  border: 2px solid #333;
+  padding: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  height: 250px;
+} */
+
+/* .box {
+  width: 120px;
+  height: 60px;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: bold;
+} */
+
+/* STATIC */
+.static-box {
+  position: static; /* default */
+  background: #777;
+}
+
+/* RELATIVE */
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* ABSOLUTE */
+.absolute-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e67e22;
+}
+
+/* FIXED */
+.fixed-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #c0392b;
+  z-index: 999;
+}
+
+/* STICKY */
+.sticky-box {
+  position: sticky;
+  top: 0;
+  background: #27ae60;
+}
+
+/* .box {
+  width: 200px;
+  background: lightblue;
+  padding: 20px;
+  margin: 0 auto;
+} */
+/* .parent {
+  text-align: center;
+} */
+
+/* .box {
+  max-width: 400px;
+  margin: auto;
+  background: lightblue;
+  padding: 20px;
+} */
+
+.box {
+  width: 120px;
+  height: 120px;
+  background: #4a90e2;
+  margin: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.3s;
+}
+.translate:hover {
+  transform: translate(30px, 0);
+}
+.rotate:hover {
+  transform: rotate(90deg);
+}
+.scale:hover {
+  transform: scale(1.3);
+}
+.skew:hover {
+  transform: skewY(20deg);
+}
+.combo:hover {
+  transform: scale(1.1) rotate(15deg) translate(20px, 0);
+}
+
+.parent {
+  position: relative;
+  height: 300px;
+  background: #eee;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: green;
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  flex: 1;
+  padding: 20px;
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: #8e44ad;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

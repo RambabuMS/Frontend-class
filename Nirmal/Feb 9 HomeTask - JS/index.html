@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feb 09 - JS</title>
+</head>
+
+<body>
+    <script>
+        //1. print prime numbers from 1 to 100
+
+        for (let i = 1; i <= 50; i++) {
+            if (isPrime(i)) console.log(i, "prime");
+        }
+
+        function isPrime(n) {
+            if (n == 1) return false;
+            if (n == 2 || n == 3) return true;
+            if (n % 2 == 0 || n % 3 == 0) return false;
+
+            let i = 5;
+
+            while (i * i <= n) {
+                if (n % i == 0 || n % (i + 2) == 0) return false;
+                i = i + 6;
+            }
+
+            return true;
+        }
+
+        //2. takes a name and returns greeting message
+
+        Greet("Nirmal");
+
+        function Greet(name) {
+            console.log("Welcome", name);
+        }
+
+        //3. check odd or even
+
+        function IsEven(n) {
+            if (n % 2 != 0) return false;
+
+            return true;
+        }
+
+        let input = 21;
+        if (IsEven(input)) {
+            console.log(input, "- Even")
+        } else {
+            console.log(input, "- Odd");
+        }
+
+        //4. loop through array
+
+        const marks = [34, 77, 69, 22, 97];
+
+        for (mark of marks) {
+            if (mark > 50) console.log(mark, "mark > 50");
+        }
+
+    </script>
+</body>
+
+</html>

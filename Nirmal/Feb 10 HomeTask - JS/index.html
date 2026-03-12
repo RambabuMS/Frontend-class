@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. filter
+        const marks = [45, 67, 89, 34, 76];
+
+        const aboveSixtyMarks = marks.filter((mark) => mark >= 60);
+
+        for (let _mark of aboveSixtyMarks) {
+            console.log(_mark, ">= 60");
+        }
+
+        //2. calculate total marks
+
+        const totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+        console.log(totalMarks, "total marks");
+
+        //3. Add and Find
+
+        const user = {
+            name: "Ram",
+            skills: ["HTML", "CSS", "JS"]
+        };
+
+        user['skills'].push("React");
+
+        const hasReact = user['skills'].find((skill) => skill === 'React');
+        console.log(hasReact, "has react");
+
+        //4. create array, find and count
+
+        const users = [
+            { id: 1, name: "Nirmal" },
+            { id: 2, name: "Raj" }
+        ]
+
+        const secondUser = users.find((user) => user.id === 2);
+        console.log(secondUser.name, ": second user");
+        console.log("Total Users: ", users.length);
+
+    </script>
+</body>
+
+</html>
