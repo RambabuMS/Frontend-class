@@ -77,6 +77,10 @@ function App() {
     return <h2>Loading ...</h2>;
   }
 
+  const handleData = (message) => {
+    console.log(message, "message");
+  };
+
   return (
     <>
       {loading ? (
@@ -98,7 +102,7 @@ function App() {
           {/* <UserCard name="Chandran" email="chandran@gmail.com" />
           <UserCard name="Nirmal" email="nirmal@gmail.com" /> */}
           {/* <User topic={classTopic} skill="Redux" /> */}
-          <Counter />
+          <Counter sendData={handleData} />
           {/* <div className="input">
             <h3>Add user</h3>
             <input

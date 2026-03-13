@@ -568,3 +568,34 @@ Framework - Angular
 install node.js
 create a folder
 npx create-react-app app-name
+
+13.03.2026
+one way data binding
+parent to child communication - props
+child to parent communication - callback function
+
+shared State - parent component
+props drilling - 2 to 3 components
+
+Context API - to avoid props drilling
+forms - handling with single state
+name attribute is important
+
+class task:
+1. create a child -> parent communication with example
+2. create counter where button is in child
+3. create a form with 3 inputs
+
+Home assignment:
+Build:
+User Registration Form:
+name
+Email
+Password
+Add user
+display list
+
+16.03.2026
+useRef, useMemo, useCallback
+Performance concepts
+localstorage
