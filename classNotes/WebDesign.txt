@@ -599,3 +599,18 @@ display list
 useRef, useMemo, useCallback
 Performance concepts
 localstorage
+
+useMemo - used to remember (cache) a value so React does not calculate it again unnecessarily.
+useCallback - used to remember (cache) a function so React does not re-run it again unnecessarily.
+
+hooks - order of execution
+
+without useCallback
+parent re-renders -> handleClick recreated -> child receives new function -> child re-renders
+
+with useCallback 
+Function stored in memory
+Not recreated on every render
+child does not re-render unnecessarily
+
+useMemo vs useCallback (useEffect)

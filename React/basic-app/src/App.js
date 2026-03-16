@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { User } from "./User";
 import Counter from "./Counter";
@@ -10,6 +10,9 @@ function App() {
   // const [userName, setUserName] = useState("");
   // const [age, setAge] = useState("");
   // const [location, setLocation] = useState("");
+  const handleClick = useCallback(() => {
+    console.log("Clicked");
+  }, []);
 
   const [userData, setUserData] = useState({
     userName: "",
@@ -39,6 +42,14 @@ function App() {
   ];
   const [userList, setUserList] = useState([]);
 
+  const inputRef = useRef();
+
+  const focusInput = () => {
+    console.log(inputRef, "input");
+    inputRef.current.focus();
+  };
+
+  sessionStorage.setItem("student", "Nirmal");
   const addUser = () => {
     // const newUser = {
     //   name: userName,
@@ -89,6 +100,8 @@ function App() {
         <div className="App">
           {isloggedIn ? <h3>Welcome</h3> : <h3>Login</h3>}
           <h1>Hi Guys Welcome to React</h1>
+          <input type="text" ref={inputRef} />
+          <button onClick={focusInput}>Focus</button>
           {/* <UserCard users={users} /> */}
           {users.map((user) => (
             <UserCard
@@ -102,7 +115,7 @@ function App() {
           {/* <UserCard name="Chandran" email="chandran@gmail.com" />
           <UserCard name="Nirmal" email="nirmal@gmail.com" /> */}
           {/* <User topic={classTopic} skill="Redux" /> */}
-          <Counter sendData={handleData} />
+          <Counter sendData={handleData} handleClick={handleClick} />
           {/* <div className="input">
             <h3>Add user</h3>
             <input
