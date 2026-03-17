@@ -606,7 +606,7 @@ useCallback - used to remember (cache) a function so React does not re-run it ag
 hooks - order of execution
 
 without useCallback
-parent re-renders -> handleClick recreated -> child receives new function -> child re-renders
+parent re-renders -> handleClick recreated -> child .receives new function -> child re-renders
 
 with useCallback 
 Function stored in memory
@@ -614,3 +614,14 @@ Not recreated on every render
 child does not re-render unnecessarily
 
 useMemo vs useCallback (useEffect)
+
+17.03.2026
+Material UI integration
+react router
+
+best practice - reusability
+
+Steps to implement router:
+step 1 - wrap App with BrowserRouter in index.js
+step 2 - Create routes in APP
+step 3 - implement route for each component

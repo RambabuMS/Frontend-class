@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counter from "./Counter";
+import Counter from "./pages/Counter";
 
 export function User(props) {
   const { topic, skill } = props;

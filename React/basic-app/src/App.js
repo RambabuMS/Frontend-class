@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { User } from "./User";
-import Counter from "./Counter";
+import Counter from "./pages/Counter";
 import UserCard from "./UserCard";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   const [isloggedIn, setIsLoggedIn] = useState(true);
@@ -98,12 +102,25 @@ function App() {
         <div>loading...</div>
       ) : (
         <div className="App">
-          {isloggedIn ? <h3>Welcome</h3> : <h3>Login</h3>}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/counter"
+              element={
+                <Counter sendData={handleData} handleClick={handleClick} />
+              }
+            />
+            <Route path="/user" element={<UserCard users={users} />} />
+          </Routes>
+          {/* {isloggedIn ? <h3>Welcome</h3> : <h3>Login</h3>}
           <h1>Hi Guys Welcome to React</h1>
-          <input type="text" ref={inputRef} />
-          <button onClick={focusInput}>Focus</button>
+          <Typography variant="h4"> Welcome to Material UI</Typography>
+          <Button variant="contained">Click here</Button>
+          <Button variant="outlined">Outline Button</Button> */}
+          {/* <input type="text" ref={inputRef} />
+          <button onClick={focusInput}>Focus</button> */}
           {/* <UserCard users={users} /> */}
-          {users.map((user) => (
+          {/* {users.map((user) => (
             <UserCard
               key={user.id}
               name={user.name}
@@ -111,11 +128,11 @@ function App() {
               isActive={user.isActive}
             />
           ))}
-          <UserCard users={users} />
+          <UserCard users={users} /> */}
           {/* <UserCard name="Chandran" email="chandran@gmail.com" />
           <UserCard name="Nirmal" email="nirmal@gmail.com" /> */}
           {/* <User topic={classTopic} skill="Redux" /> */}
-          <Counter sendData={handleData} handleClick={handleClick} />
+          {/* <Counter sendData={handleData} handleClick={handleClick} /> */}
           {/* <div className="input">
             <h3>Add user</h3>
             <input
