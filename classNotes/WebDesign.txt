@@ -625,3 +625,87 @@ Steps to implement router:
 step 1 - wrap App with BrowserRouter in index.js
 step 2 - Create routes in APP
 step 3 - implement route for each component
+
+18.03.2026
+Todo App
+
+Babel - Javascript compiler converts modern Js into browser compatible Js
+
+jsx
+ES6+ - modern syntax
+
+ex: const add = (a, b) => a + b;
+
+var add = function(a, b) {
+  return a + b;
+}
+
+jsx- <h1>Hello</h1>
+
+babel converts - React.CreateElement("h1", null, "Hello");
+
+- Transpile modern code
+- make code browser compatible
+- Convert JSX
+
+Webpack:
+Webpack is a module bundler
+- converts many files into one
+
+React has - JS, css, images, components, libraries
+
+Browser cannot handle many modules efficiently.
+
+-> Bundles everything into optimized files
+ Header.jsx, Home.jsx, Counter.jsx
+
+ bundle.js, bundle.css
+
+ JSX -> Babel converts -> Webpack bundles -> Browser runs
+
+ Vite:
+
+ problems with Webpack:
+ Slow startup
+ Slow rebuild
+ Heavy configuration
+
+ -> Make development super fast
+
+-> Native ES modules in browser
+=> instead of bundling everything first
+
+Webpack - start dev server - bundle entire app - then show in browser
+
+Vite - start dev server - Serve files on demand - Instant UI
+
+npm run dev - command to run the application
+
+ES build - written in Go lang
+faster than babel - vite uses ES build
+
+npm run build
+
+Vite -> Bundles code -> optimize -> Minifies -> tree shakes
+
+dist/
+    index.html
+    /assets
+
+modern js - export and import statements
+
+module.exports = {
+  entry: "./src/index.js",
+  output:{
+     filename:"bundle.js"
+     }
+}
+
+By default react runs - 3000
+
+command: npm create vite@latest
+
+Vite - Development tool
+React - UI library
+
+dev dependency - npm i library name --save-dev
