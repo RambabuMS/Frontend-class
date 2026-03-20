@@ -1,0 +1,24 @@
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
+function Navbar() {
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Todo App
+        </Typography>
+
+        <Button color="inherit" component={Link} to="/home">
+          Home
+        </Button>
+
+        <Button color="inherit" component={Link} to="/add">
+          Add Todo
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
+}
+
+export default Navbar;

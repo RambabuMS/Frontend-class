@@ -75,7 +75,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("component mounted");
+    // console.log("component mounted");
     const fetchUsers = async () => {
       setLoading(true);
       await fetch("https://jsonplaceholder.typicode.com/users")
@@ -88,13 +88,14 @@ function App() {
     fetchUsers();
   }, []);
 
-  if (loading) {
-    return <h2>Loading ...</h2>;
-  }
-
   const handleData = (message) => {
     console.log(message, "message");
   };
+
+  // const styles = {
+  //   color: "red",
+  //   fontSize: "30px",
+  // };
 
   return (
     <>
@@ -110,8 +111,28 @@ function App() {
                 <Counter sendData={handleData} handleClick={handleClick} />
               }
             />
-            <Route path="/user" element={<UserCard users={users} />} />
+            <Route
+              path="/user"
+              element={<UserCard users={users} name="Chandran" />}
+            />
           </Routes>
+          {/* <div className="userList">
+            {userList.map((user) => {
+              return (
+                <div key={user.id} className="userData">
+                  <h1>{user.name}</h1>
+                  <h2>{user.age}</h2>
+                  <h3>{user.location}</h3>
+                </div>
+              );
+            })}
+          </div> */}
+          <h4
+            className="header"
+            style={{ border: loading ? "2px solid black" : "3px dotted red" }}
+          >
+            Hi Guys
+          </h4>
           {/* {isloggedIn ? <h3>Welcome</h3> : <h3>Login</h3>}
           <h1>Hi Guys Welcome to React</h1>
           <Typography variant="h4"> Welcome to Material UI</Typography>
@@ -128,7 +149,6 @@ function App() {
               isActive={user.isActive}
             />
           ))}
-          <UserCard users={users} /> */}
           {/* <UserCard name="Chandran" email="chandran@gmail.com" />
           <UserCard name="Nirmal" email="nirmal@gmail.com" /> */}
           {/* <User topic={classTopic} skill="Redux" /> */}

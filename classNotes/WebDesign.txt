@@ -503,6 +503,7 @@ Use async function that waits 1 second before printing
 25.02.2026
 
 26.02.2026
+What is React
 Functional Component
 props
 
@@ -577,7 +578,7 @@ child to parent communication - callback function
 shared State - parent component
 props drilling - 2 to 3 components
 
-Context API - to avoid props drilling
+Context API - to avoid props drilling - useContext
 forms - handling with single state
 name attribute is important
 
@@ -709,3 +710,13 @@ Vite - Development tool
 React - UI library
 
 dev dependency - npm i library name --save-dev
+
+20.03.2026
+
+TODO App
+
+https://jsonplaceholder.typicode.com/
+
+endpoint - /todos
+
+Add todo - with ui and api integration
