@@ -9,7 +9,7 @@ function Navbar() {
           Todo App
         </Typography>
 
-        <Button color="inherit" component={Link} to="/home">
+        <Button color="inherit" component={Link} to="/">
           Home
         </Button>
 

@@ -1,17 +1,21 @@
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import TodoItems from "./../components/TodoItems";
-import "./../App.css";
+import { List, Typography } from "@mui/material";
+import TodoItem from "../components/TodoItem";
 
-function Home({ todos }) {
+function Home({ todos, deleteTodo, toggleTodo }) {
   return (
     <>
-      <Typography variant="h4" sx={{ mt: 3 }} className="todo">
+      <Typography variant="h5" sx={{ mt: 2 }}>
         Todo List
       </Typography>
+
       <List>
         {todos.map((todo) => (
-          <TodoItems key={todo.id} todo={todo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            deleteTodo={deleteTodo}
+            toggleTodo={toggleTodo}
+          />
         ))}
       </List>
     </>
