@@ -20,7 +20,7 @@ function App() {
   const addTodo = async (title, id) => {
     if (id) {
       setTodos((prev) =>
-        prev.map(todos.map((t) => (t.id === id ? { ...t, title } : t))),
+        prev.map((t) => (t.id === Number(id) ? { ...t, title } : t)),
       );
       setMsg("Todo Updated");
       setSnack(true);
@@ -34,8 +34,7 @@ function App() {
     });
 
     const data = await res.json();
-    setTodos([{ ...data, id: Date.now() }, ...todos]);
-
+    setTodos((prev) => [{ ...data, id: Date.now() }, ...prev]);
     setMsg("Todo Added");
     setSnack(true);
   };
