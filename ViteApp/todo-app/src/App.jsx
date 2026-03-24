@@ -19,8 +19,26 @@ function App() {
 
   const addTodo = async (title, id) => {
     if (id) {
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/todos/${id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            id,
+            title,
+            completed: false,
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        },
+      );
+      const updated = await res.json();
+
       setTodos((prev) =>
-        prev.map((t) => (t.id === Number(id) ? { ...t, title } : t)),
+        prev.map((t) =>
+          t.id === Number(id) ? { ...t, title: updated.title } : t,
+        ),
       );
       setMsg("Todo Updated");
       setSnack(true);
@@ -76,10 +94,7 @@ function App() {
 
           <Route path="/add" element={<AddPage addTodo={addTodo} />} />
 
-          <Route
-            path="/edit/:id"
-            element={<EditPage todos={todos} addTodo={addTodo} />}
-          />
+          <Route path="/edit/:id" element={<EditPage addTodo={addTodo} />} />
         </Routes>
       </Container>
 

@@ -1,13 +1,19 @@
 import { Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import AddTodo from "../components/AddTodo";
+import { useEffect, useState } from "react";
 
-function EditPage({ todos, addTodo }) {
+function EditPage({ addTodo }) {
   const { id } = useParams();
+  const [todo, setTodo] = useState(null);
 
-  const editTodo = todos.find((t) => t.id === Number(id));
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      .then((res) => res.json())
+      .then((data) => setTodo(data));
+  }, [id]);
 
-  if (!editTodo) return <p>Loading...</p>;
+  if (!todo) return <p>Loading...</p>;
 
   return (
     <>
@@ -15,7 +21,7 @@ function EditPage({ todos, addTodo }) {
         Edit Todo
       </Typography>
 
-      <AddTodo addTodo={addTodo} edit={editTodo} id={id} />
+      <AddTodo addTodo={addTodo} edit={todo} id={id} />
     </>
   );
 }
