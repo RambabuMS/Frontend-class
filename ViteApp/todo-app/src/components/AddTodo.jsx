@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { TextField, Button, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../UserContext.js";
 
 function AddTodo({ addTodo, edit, id }) {
   const [text, setText] = useState(edit?.title || "");
   const navigate = useNavigate();
-
+  const { user } = useContext(UserContext);
   // useEffect(() => {
   //   if (edit) {
   //     setText(edit.title);
@@ -21,6 +22,7 @@ function AddTodo({ addTodo, edit, id }) {
 
   return (
     <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
+      <h2>{user}</h2>
       <TextField
         fullWidth
         label="Enter Todo"

@@ -720,3 +720,5 @@ https://jsonplaceholder.typicode.com/
 endpoint - /todos
 
 Add todo - with ui and api integration
+
+using MUI - light mode and dark mode
