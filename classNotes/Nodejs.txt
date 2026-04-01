@@ -1,0 +1,43 @@
+What is Nodejs
+sync vs async
+Architecture of Nodejs
+
+https://kamronbekshodmonov.github.io/JELoop-Visualizer/
+loupe event loop - site search
+js visualizer
+
+python tutor
+
+JS basics with examples
+sync and async
+
+✅ JavaScript is Single-Threaded
+✅ Event Loop Full Explanation
+✅ Call Stack
+✅ Web APIs
+✅ Callback Queue
+✅ Microtask Queue
+✅ How Callbacks, Promises, Async/Await behave in the Event Loop
+
+01.04.2026
+
+Node vs Browser JS
+Feature  	     Browser	Node
+DOM	            Yes	    No
+Window Object 	Yes	    No
+File System	    No	    Yes
+Backend	        No	    Yes
+
+Nodejs - don't have DOM, window.
+
+steps:
+create - npm init -y
+to run - node server.js
+convert(support) to ES6 - type: module 
+
+in-built modules:
+os
+fs
+http
+
+to make the server listen - nodemon
