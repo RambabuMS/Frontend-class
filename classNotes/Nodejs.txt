@@ -41,3 +41,83 @@ fs
 http
 
 to make the server listen - nodemon
+
+Task:
+File based Notes App
+features: 
+Add note => save in File
+get notes => read file
+
+readfileSync vs readfile
+writefileSync vs writefile
+
+=> Problems in readfileSync
+-> Slower performance
+-> Blocks server
+-> Not scalable
+
+Blocking vs Non Blocking
+
+https://sqlbolt.com/
+
+promise types
+
+execution - sequence
+
+problems based on promise, callback, async await
+
+Nested -> Hard to read -> Hard to debug -> Hard to maintain
+
+Callback hell 
+
+types of promise:
+Promise.all()
+=> Runs all promises
+=> Fails if any promise fails
+
+Promise.allSettled()
+=> waits for all
+=> Returns success + failure
+
+Promise.race()
+=> returns the first promise completed
+
+Promise.any()
+=> returns first success
+=> ignores failures
+
+Error handling:
+
+callback => if else
+promise => 
+promise
+.then(res => console.log(res))
+.catch(err => console.log(res))
+async => 
+
+async function test() {
+  try {
+    const data = await promise;
+  }catch (err){
+    console.log(err);
+  }
+}
+
+tasks:
+1. Sequential Execution
+function task(name, time){
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log(name);
+      resolve();
+    }, time)
+  });
+}
+
+2. Multiple API Calls with Error
+const p1 = Promise.resolve("Data1");
+const p2 = Promise.reject("Error");
+const p3 = Promise.resolve("Data3");
+Questions:
+Using Promise.all → what happens?
+Using allSettled → output?
