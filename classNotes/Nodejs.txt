@@ -121,3 +121,13 @@ const p3 = Promise.resolve("Data3");
 Questions:
 Using Promise.all → what happens?
 Using allSettled → output?
+
+Promise.prototype.finally()
+
+Promise.prototype.finally is a method that allows you to execute code regardless of whether a promise is fulfilled or rejected. It’s called when a promise is either resolved or rejected, and it’s used to perform cleanup or other tasks that need to happen in either case.
+
+Database - SQL and MongoDB
+
+tasks:
+
+https://nosy-layer-28c.notion.site/Nodejs-tasks-33c3891562188027af04d0f35f6d18b6
