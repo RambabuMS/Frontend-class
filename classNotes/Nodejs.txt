@@ -129,5 +129,36 @@ Promise.prototype.finally is a method that allows you to execute code regardless
 Database - SQL and MongoDB
 
 tasks:
-
 https://nosy-layer-28c.notion.site/Nodejs-tasks-33c3891562188027af04d0f35f6d18b6
+
+21.04.2026
+
+Express.js
+Framework of nodejs
+-> routing, middleware, APIs
+
+folder structure
+
+project name/
+routes
+controllers
+services
+models
+config
+server.js
+
+Client => Route => Controller => Service => Database
+
+mvc - > model view controller structure 
+check for other structures
+
+router -> handles api url endpoint and http method
+controller -> Logic and response
+
+Service: Business logic and database operations
+
+steps to start a nodejs project:
+npm init -y => create a server.js
+server auto restart => nodemon
+dev dependency - npm i nodemon --save-dev
+install express

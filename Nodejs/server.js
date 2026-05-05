@@ -1,8 +1,46 @@
-const userName = require("./user");
-const os = require("os");
+// const userName = require("./user");
+// const os = require("os");
+import { userName, users } from "./user.js";
+import os from "os";
 // const fs = require("fs");
-const http = require("http");
-const fs = require("fs/promises");
+// const http = require("http");
+import http from "http";
+import fs from "fs/promises";
+import express from "express";
+import userRouter from "./routes/userRoutes.js";
+
+const app = express();
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({ success: true, data: "Home Page" });
+});
+
+// app.get("/users", (req, res) => {
+//   res.json({ success: true, data: users });
+// });
+
+// app.post("/users", (req, res) => {
+//   const newUser = req.body;
+//   users.push(newUser);
+//   res.json({ data: users });
+// });
+
+// app.put("/users/:id", (req, res) => {
+//   let id = Number(req.params.id);
+//   const updatedUsers = users.map((user) => {
+//     return user.id === id ? { ...user, ...req.body } : user;
+//   });
+//   res.json({ data: updatedUsers });
+// });
+
+app.use("/users", userRouter);
+
+app.listen(5000, (err) => {
+  console.log(`server started at 5000`);
+});
+
+// const fs = require("fs/promises");
 
 // console.log("Welcome to Nodejs", userName);
 // console.log("Version", os.version());
