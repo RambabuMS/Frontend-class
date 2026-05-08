@@ -7,11 +7,14 @@ import os from "os";
 import http from "http";
 import fs from "fs/promises";
 import express from "express";
+import dotenv from "dotenv";
 import userRouter from "./routes/userRoutes.js";
+import { connectDB } from "./config/db.js";
 
 const app = express();
+dotenv.config();
 app.use(express.json());
-
+connectDB();
 app.get("/", (req, res) => {
   res.json({ success: true, data: "Home Page" });
 });

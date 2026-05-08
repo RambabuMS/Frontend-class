@@ -162,3 +162,21 @@ npm init -y => create a server.js
 server auto restart => nodemon
 dev dependency - npm i nodemon --save-dev
 install express
+
+Mongodb Practice:
+https://mongoplayground.net/
+
+install mongo shell
+Queries in mongodb:
+
+find
+projections
+sorting - sort, limit, skip
+aggregation
+indexing
+
+npm i mongoose
+
+connectDB function
+
+import in server
