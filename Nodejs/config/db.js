@@ -8,3 +8,4 @@ export const connectDB = async () => {
     console.log(error);
   }
 };
+// MONGO_URI=mongodb://localhost:27017/Mern_Class

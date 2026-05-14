@@ -10,6 +10,8 @@ import express from "express";
 import dotenv from "dotenv";
 import userRouter from "./routes/userRoutes.js";
 import { connectDB } from "./config/db.js";
+import { User } from "./models/User.js";
+import { error } from "console";
 
 const app = express();
 dotenv.config();
@@ -37,7 +39,18 @@ app.get("/", (req, res) => {
 //   res.json({ data: updatedUsers });
 // });
 
-app.use("/users", userRouter);
+// app.use("/users", userRouter);
+
+app.post("/users", async (req, res) => {
+  try {
+    const user = await User.create(req.body);
+    res.status(201).json({ success: true, data: user });
+  } catch (err) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+});
 
 app.listen(5000, (err) => {
   console.log(`server started at 5000`);
